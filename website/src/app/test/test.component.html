@@ -1,0 +1,20 @@
+<ng-template #lesson let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Create Lessons</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form (submit)="submit($event)" #form novalidate>
+        <label for="name">Name: </label>
+        <input type="text" name="name" [(ngModel)]="lessonName">
+      </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="c('Save')">Save</button>
+        <button type="button" class="btn btn-outline-dark" (click)="c('Cancel')">Cancel</button>
+    </div>
+  </ng-template>
+
+  <button class="btn btn-lg btn-outline-primary" (click)="open(lesson)">Create Lesson</button>

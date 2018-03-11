@@ -1,0 +1,8 @@
+<div *ngIf="course">
+  <div *ngFor="let division of objectkeys(course['course_division'])" class="division">
+    {{course['course_division'][division].name}}
+    <div *ngFor="let lesson of objectkeys(course['course_division'][division]['lessons'])">
+      <p>{{course['course_division'][division]['lessons'][lesson].name}}</p>
+    </div>
+  </div>
+</div>

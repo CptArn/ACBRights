@@ -1,5 +1,5 @@
 <?php
-    $db = new SQLite3('ACBRights.db');
+    $db = new PDO('sqlite:ACB.db');
     // $db->exec('DROP TABLE IF EXISTS t_users');
     // $db->exec('DROP TABLE IF EXISTS t_roles');
     // $db->exec('DROP TABLE IF EXISTS t_user_has_roles');
